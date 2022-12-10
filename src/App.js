@@ -1,25 +1,36 @@
-import logo from './logo.svg';
+/** @jsxImportSource @emotion/react */
 import './App.css';
+import * as React from 'react'
+import {Routes, Navigate, Route, BrowserRouter} from 'react-router-dom'
+import {DashboardScreen} from './screens/dashboard.js'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div 
+      className="App"
+      css={{
+        textAlign: 'center',
+        display: 'flex',
+        flexDirection: 'column',
+        minHeight: '100vh',
+      }}  
+    >
+      <div>
+        <BrowserRouter>
+          <AppRoutes/>
+        </BrowserRouter>
+      </div>
     </div>
-  );
+  )
+}
+
+function AppRoutes() {
+  return (
+    <Routes>
+      <Route path='/' element={<DashboardScreen/>}/>
+      <Route path='*' element={<Navigate to='/'/>}/>
+    </Routes>
+  )
 }
 
 export default App;
