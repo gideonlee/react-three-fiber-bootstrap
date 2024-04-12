@@ -8,7 +8,7 @@ function EnvironmentBlur() {
   const [preset, setPreset] = React.useState('sunset')
   // You can use the "transition" boolean to react to the loading in-between state,
   // For instance by showing a message
-  const [transition, setTransition] = React.useTransition()
+  const [, setTransition] = React.useTransition()
   const {blur} = useControls({
     blur: { value: 0.65, min: 0, max: 1 },
     preset: {
@@ -25,4 +25,28 @@ function EnvironmentBlur() {
   )
 }
 
-export {EnvironmentBlur}
+//Get Pyramidal Index
+// Returns an array of decreasing index values in a pyramid shape, starting from the specified index with the highest value. These indices are often used to create overlapping effects among elements.
+// [array.length-1, array.length-2, ... 1, 0]
+const getPyramidalIndex = (array, index) => (
+  array.map((_, i) => (
+    index === i ? array.length : array.length - Math.abs(index - i)
+  ))
+)
+
+//Lerp
+const lerp = (v0, v1, t) => v0 * (1 - t) + v1 * t
+
+// Store and retrieve previous state
+function usePrevious(state) {
+  // Generic ref object container that can hold any value
+  const ref = React.useRef()
+
+  React.useEffect(() => {
+    ref.current = state
+  }, [state])
+
+  return ref.current
+}
+
+export {EnvironmentBlur, usePrevious, getPyramidalIndex, lerp}
