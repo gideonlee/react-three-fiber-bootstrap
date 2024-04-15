@@ -89,16 +89,6 @@ function ProjectScreen(props) {
     window.scrollTo(0, 0)
   }, [])
 
-  // Lenis scroll length needs to be recalculated for dynamic height elements. If not, it may not scroll all the way down.
-  // React.useEffect(() => {
-    // Starting and stopping lenis allows for smooth scrolling to work normally.
-    // if (loaded === data[activeIndex]?.images?.length) {
-    //   lenis?.start()
-    // } else {
-    //   lenis?.stop()
-    // }
-  // }, [loaded, lenis, activeIndex])
-
   // Set project, title, and index.
   React.useEffect(() => {
     document.body.style.cursor ='auto'

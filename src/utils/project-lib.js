@@ -1,6 +1,8 @@
 /** @jsxImportSource @emotion/react */
 import * as React from 'react'
 import * as mq from 'utils/media-queries'
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 
 // Title mix blend mode banner
 function TitleMixBlendModeBanner(props) {
@@ -355,7 +357,7 @@ function ProjectImagesContainer({...props}) {
 
 // Sizes are predefined for Lenis, which struggles with dynamic resizing.
 function ProjectImage({src, title, onLoad, ...props}) {
-  const [loaded, setLoaded] = React.useState(false);
+  const [loading, setLoading] = React.useState(true);
 
   return (
     <div
@@ -363,8 +365,8 @@ function ProjectImage({src, title, onLoad, ...props}) {
         marginTop: '80px',
         marginBottom: '80px',
         opacity: '1',
+        height: '100px',
         transform: 'translateY(20px)',
-        backgroundColor: loaded ? "#ccc" : "transparent",
         [mq.extraSmall]: {
           minHeight: '160px',
           maxHeight: '355px',
@@ -378,11 +380,13 @@ function ProjectImage({src, title, onLoad, ...props}) {
           maxHeight: '710px'
         },
         [mq.large]: {
+          minHeight: '710px',
           maxHeight: '772px',
         },
       }}
       {...props}
     >
+      { loading && <Skeleton height={'100%'} /> }
       <img
         css={{
           width: '100%',
@@ -392,8 +396,9 @@ function ProjectImage({src, title, onLoad, ...props}) {
         src={src}
         alt={`project-${title}`}
         onLoad={() => {
+          console.log(loading)
+          setLoading(false)
           onLoad()
-          setLoaded(false)
         }}
       />
     </div>
