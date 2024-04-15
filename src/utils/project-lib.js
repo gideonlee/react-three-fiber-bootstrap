@@ -355,6 +355,8 @@ function ProjectImagesContainer({...props}) {
 
 // Sizes are predefined for Lenis, which struggles with dynamic resizing.
 function ProjectImage({src, title, onLoad, ...props}) {
+  const [loaded, setLoaded] = React.useState(false);
+
   return (
     <div
       css={{
@@ -362,6 +364,7 @@ function ProjectImage({src, title, onLoad, ...props}) {
         marginBottom: '80px',
         opacity: '1',
         transform: 'translateY(20px)',
+        backgroundColor: loaded ? "#ccc" : "transparent",
         [mq.extraSmall]: {
           minHeight: '160px',
           maxHeight: '355px',
@@ -384,26 +387,14 @@ function ProjectImage({src, title, onLoad, ...props}) {
         css={{
           width: '100%',
           outline: '1px solid #e5e5e5',
-
-          [mq.extraSmall]: {
-            minHeight: '160px',
-            maxHeight: '355px',
-          },
-          [mq.small]: {
-            minHeight: '337px',
-            maxHeight: '580px',
-          },
-          [mq.medium]: {
-            minHeight: '582px',
-            maxHeight: '710px'
-          },
-          [mq.large]: {
-            maxHeight: '772px',
-          },
+          height: '100%',
         }}
         src={src}
         alt={`project-${title}`}
-        onLoad={onLoad}
+        onLoad={() => {
+          onLoad()
+          setLoaded(false)
+        }}
       />
     </div>
   )

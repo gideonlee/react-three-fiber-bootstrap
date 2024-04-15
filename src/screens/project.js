@@ -35,21 +35,22 @@ function ProjectScreen(props) {
   const [showDetailLabel, setShowDetailLabel] = React.useState(false)
   const [showDetail, setShowDetail] = React.useState(false)
   const year = new Date().getFullYear()
-  const [loaded, setLoaded] = React.useState(0)
+  const [, setLoaded] = React.useState(0)
 
   const imagesRef = React.useRef([])
   const showAboutRef = React.useRef(false)
   const showDetailsRef = React.useRef(false)
 
-  window.onscroll = function(ev) {
-    if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight) {
-      // you're at the bottom of the page
-      console.log("Bottom of page");
-    }
-  };
+  // Scroll to bottom eventlistener.
+  // window.onscroll = function(ev) {
+  //   if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight) {
+  //     // you're at the bottom of the page
+  //     console.log("Bottom of page");
+  //   }
+  // };
 
   // Scroll Effects
-  const lenis = useLenis((lenis) => {
+  useLenis((lenis) => {
     // console.log(lenis)
     // Parallax title element on scroll 
     if (bannerElement && bannerElement.length > 0) {
@@ -86,19 +87,17 @@ function ProjectScreen(props) {
   // Scroll to top. 
   React.useEffect(() => {
     window.scrollTo(0, 0)
-    lenis?.stop()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   // Lenis scroll length needs to be recalculated for dynamic height elements. If not, it may not scroll all the way down.
-  React.useEffect(() => {
+  // React.useEffect(() => {
     // Starting and stopping lenis allows for smooth scrolling to work normally.
-    if (loaded === data[activeIndex]?.images?.length) {
-      lenis?.start()
-    } else {
-      lenis?.stop()
-    }
-  }, [loaded, lenis, activeIndex])
+    // if (loaded === data[activeIndex]?.images?.length) {
+    //   lenis?.start()
+    // } else {
+    //   lenis?.stop()
+    // }
+  // }, [loaded, lenis, activeIndex])
 
   // Set project, title, and index.
   React.useEffect(() => {

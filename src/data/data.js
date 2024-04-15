@@ -95,7 +95,7 @@ const data = [
     aboutTag: 'Fantasy Golf',
     about: 'PGA Fantasy Golf allows participants to create fantasy teams composed of real PGA Tour golfers and compete against each other based on the performance of those golfers in actual PGA Tour events.',
     roles: ['Front End Web Developer'],
-    clients: ['BetMGM, SBNation'],
+    clients: ['PGA Tour'],
     date: '2023',
     link: 'https://fantasygolf.pgatour.com',
     images: ['/pga-1.jpg', '/pga-2.jpg', '/pga-3.png'],
