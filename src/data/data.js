@@ -5,7 +5,7 @@ import pie from 'assets/pie.jpg'
 import opal from 'assets/opal.jpg'
 import classy from 'assets/classy.jpg'
 import green from 'assets/green.jpg'
-import outreach from 'assets/outreach.jpg'
+// import outreach from 'assets/outreach.jpg'
 import boxing from 'assets/boxing.jpg'
 import fluffice from 'assets/fluffice1.jpg'
 import grooming from 'assets/grooming1.jpg'
@@ -13,6 +13,7 @@ import nhtAudio from 'assets/slide-nht.jpg'
 import ncaa from 'assets/ncaa.jpg'
 import survivor from 'assets/survivor.jpg'
 import pga from 'assets/pga.jpg'
+import proBowl from 'assets/pro-bowl.jpg'
 
 const data = [
   { 
@@ -100,6 +101,19 @@ const data = [
     images: ['/pga-1.jpg', '/pga-2.jpg', '/pga-3.png'],
   },
   { 
+    title: `NCAA Bowl Pick'em`,
+    src: proBowl, 
+    path: '/projects/ncaa-football-bowl',
+    aboutTag: 'College Football Bowl',
+    about: `The NCAA Division 1 Football Bowl Pick'em is a game where participants could 
+     allows participants to create fantasy teams composed of real PGA Tour golfers and compete against each other based on the performance of those golfers in actual PGA Tour events.`,
+    roles: ['Front End Web Developer'],
+    clients: ['BetMGM'],
+    date: '2023',
+    link: 'https://promo.nj.betmgm.com/en/promo/dev/collegebowl',
+    images: ['/pb-1.jpg', '/pb-2.jpg'],
+  },
+  { 
     title: 'Epicurean',
     src: art, 
     path: '/projects/epicurean',
@@ -183,18 +197,18 @@ const data = [
     link: '',
     images: [],
   },
-  { 
-    title: 'Outreach',
-    src: outreach,
-    path: '/projects/outreach',
-    aboutTag: '',
-    about: '',
-    roles: [],
-    clients: [],
-    date: '',
-    link: '',
-    images: [],
-  },
+  // { 
+  //   title: 'Outreach',
+  //   src: outreach,
+  //   path: '/projects/outreach',
+  //   aboutTag: '',
+  //   about: '',
+  //   roles: [],
+  //   clients: [],
+  //   date: '',
+  //   link: '',
+  //   images: [],
+  // },
 ]
 
 export {data}

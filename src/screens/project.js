@@ -207,7 +207,7 @@ function ProjectScreen(props) {
             <div 
               css={{
                 margin: '0 auto',
-                fontFamily: 'Arial',
+                fontFamily: 'Open Sans',
                 marginTop: '2rem',
                 marginBottom: '1rem',
               }}
