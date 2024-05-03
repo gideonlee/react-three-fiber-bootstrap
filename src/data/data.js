@@ -109,7 +109,7 @@ const data = [
      allows participants to create fantasy teams composed of real PGA Tour golfers and compete against each other based on the performance of those golfers in actual PGA Tour events.`,
     roles: ['Front End Web Developer'],
     clients: ['BetMGM'],
-    date: '2023',
+    date: '2024',
     link: 'https://promo.nj.betmgm.com/en/promo/dev/collegebowl',
     images: ['/pb-1.jpg', '/pb-2.jpg'],
   },

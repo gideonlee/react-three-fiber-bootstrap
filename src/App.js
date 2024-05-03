@@ -70,8 +70,8 @@ function App() {
         display: 'flex',
         flexDirection: 'column',
         minHeight: '100vh',
-        // Don't need to blend background if postprocessing is removed.
-        // backgroundColor: '#000',
+        // The default screen will be black because during loading, the screen will show white text.
+        backgroundColor: '#000',
       }}  
     >
       <div
