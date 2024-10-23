@@ -5,7 +5,7 @@ import pie from 'assets/pie.jpg'
 import opal from 'assets/opal.jpg'
 import classy from 'assets/classy.jpg'
 import green from 'assets/green.jpg'
-// import outreach from 'assets/outreach.jpg'
+import outreach from 'assets/outreach.jpg'
 import boxing from 'assets/boxing.jpg'
 import fluffice from 'assets/fluffice1.jpg'
 import grooming from 'assets/grooming1.jpg'
@@ -14,6 +14,7 @@ import ncaa from 'assets/ncaa.jpg'
 import survivor from 'assets/survivor.jpg'
 import pga from 'assets/pga.jpg'
 import proBowl from 'assets/pro-bowl.jpg'
+import fanball from 'assets/fanball.png'
 
 const data = [
   { 
@@ -35,7 +36,7 @@ const data = [
     aboutTag: 'Audio Experience',
     about: 'Now Hear This (NHT) is an American loudspeaker and audio company based in Benicia, California that produces production studio and professional quality acoustic suspension loudspeaker and in-wall speakers.',
     roles: ['Web Developer', 'Visual Designer', 'Database Engineer', 'Photo Editer'],
-    clients: ['Jonathan Sun'],
+    clients: ['NHT Audio', 'Jonathan Sun'],
     date: '2019',
     link: 'https://www.nhthifi.com',
     images: ['/nht-1.jpg', '/nht-2.jpg', '/nht-3.jpg', '/nht-4.jpg'],
@@ -47,7 +48,7 @@ const data = [
     aboutTag: 'Classic Dessert with a Taiwanese Spin',
     about: `Established in 2011, Fluff Ice is a Taiwanese dessert franchise based in Rosemead, California. They specialize in innovative fusion desserts that combines the creaminess of ice cream with the texture of shaved ice.`,
     roles: ['Web Developer', 'Visual Designer', 'Photo Editor'],
-    clients: ['Nick Huang'],
+    clients: ['Fluff Ice', 'Nick Huang'],
     date: '2022',
     link: 'https://fluffice.com/',
     images: ['/fi-1.jpg', '/fi-2.jpg', '/fi-3.jpg', '/fi-4.jpg'],
@@ -87,6 +88,18 @@ const data = [
     date: '2023',
     link: 'https://promo.nj.betmgm.com/en/promo/survivor-pool',
     images: ['/survivor-1.jpg', '/survivor-2.png'],
+  },
+  {
+    title: `Fanball Winners`,
+    src: fanball,
+    path: '/projects/fanball-winners',
+    aboutTag: 'Mobile Sports Betting App',
+    about: `Fanball Winners is a fantasy sports game that is designed to be easy to play and appeal to a wide audience, including both casual and experienced fantasy sports players.`,
+    roles: ['Lead Front End Web Developer'],
+    clients: ["SportsHub"],
+    date: '2024',
+    link: "https://www.fanball.com/winners",
+    images: ['/fw-1.jpg']
   },
   { 
     title: 'PGA Tour',
@@ -197,18 +210,18 @@ const data = [
     link: '',
     images: [],
   },
-  // { 
-  //   title: 'Outreach',
-  //   src: outreach,
-  //   path: '/projects/outreach',
-  //   aboutTag: '',
-  //   about: '',
-  //   roles: [],
-  //   clients: [],
-  //   date: '',
-  //   link: '',
-  //   images: [],
-  // },
+  { 
+    title: 'Outreach',
+    src: outreach,
+    path: '/projects/outreach',
+    aboutTag: '',
+    about: '',
+    roles: [],
+    clients: [],
+    date: '',
+    link: '',
+    images: [],
+  },
 ]
 
 export {data}
