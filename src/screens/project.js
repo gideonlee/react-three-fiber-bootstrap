@@ -85,9 +85,9 @@ function ProjectScreen(props) {
   })
 
   // Scroll to top. 
-  React.useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
+  // React.useEffect(() => {
+  //   window.scrollTo(0, 0)
+  // }, [])
 
   // Set project, title, and index.
   React.useEffect(() => {
@@ -139,7 +139,7 @@ function ProjectScreen(props) {
             >{char}</TitleChar>
           ))}
         </TitleMixBlendModeBanner>
-        {project ?
+        {project &&
           <ProjectContainer>
             <AboutHeaderProject show={project.aboutTag !== '' ? showHeader : false}/> 
             <AboutTagline show={showTagline}>{project.aboutTag}</AboutTagline>     
@@ -198,11 +198,10 @@ function ProjectScreen(props) {
                 margin: '0 auto',
                 fontFamily: 'Open Sans',
                 marginTop: '2rem',
-                marginBottom: '1rem',
+                marginBottom: '2rem',
               }}
             >Gidzilla, {year}</div>
           </ProjectContainer>
-          : null
         } 
       </div>
     </ReactLenis>

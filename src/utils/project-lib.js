@@ -71,6 +71,7 @@ function ProjectContainer({children, ...props}) {
         flexDirection: 'column',
         marginLeft: '22.5px',
         marginRight: '22.5px',
+        width: '100%',
       }}
       {...props}
     >
@@ -96,7 +97,7 @@ function UnderConstruction({show, ...props}) {
         flex: '1',
         width: '100%',
         textAlign: 'center',
-        // height: '100%',
+        marginBottom: '192px',
         [mq.extraSmall]: {
           fontSize: '1.1rem',
         },
