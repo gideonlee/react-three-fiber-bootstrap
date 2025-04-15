@@ -12,10 +12,11 @@ import grooming from 'assets/grooming1.jpg'
 import nhtAudio from 'assets/slide-nht.jpg'
 import ncaa from 'assets/ncaa.jpg'
 import survivor from 'assets/survivor.jpg'
-import pga from 'assets/pga.jpg'
+import pga from 'assets/pga3.jpg'
 import proBowl from 'assets/pro-bowl.jpg'
 import fanball from 'assets/fanball.png'
 import masters from 'assets/masters.jpg'
+import vacation from 'assets/dog-vacation.jpg'
 
 import couture from 'assets/design-model.jpg'
 
@@ -115,7 +116,7 @@ const data = [
 	{
 		title: `Masters Fantasy`,
 		src: masters,
-		path: '/projects/fanball-winners',
+		path: '/projects/masters',
 		aboutTag: 'Roster Competition Fantasy Game',
 		about: `The Masters Tournament is an invitational golf tournament held annually at Augusta National Golf Club. Keep up to date with your favorite golfers and engage with your own fantasy leagues during the tournament.`,
 		roles: ['Lead Front End Web Developer'],
@@ -257,7 +258,19 @@ const data = [
 	{
 		title: 'Couture',
 		src: couture,
-		path: '/projects/outreach',
+		path: '/projects/couture',
+		aboutTag: '',
+		about: '',
+		roles: [],
+		clients: [],
+		date: '',
+		link: '',
+		images: [],
+	},
+	{
+		title: 'Vacation',
+		src: vacation,
+		path: '/projects/vacation',
 		aboutTag: '',
 		about: '',
 		roles: [],
